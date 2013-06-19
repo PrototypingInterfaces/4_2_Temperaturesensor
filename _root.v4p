@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
-   <PATCH nodename="C:\Users\dl-110\Documents\GitHub\All_Patches\4_2_beta29.2_Temperatursensor\_root.v4p" bgcolor="15132390" filename="C:\Users\dl-110\Desktop\ArduinoBasics\07_RGB_LED\vvvv\RGB_LED.v4p" systemname="RGB_LED">
+   <PATCH nodename="C:\Users\dl-110\Desktop\4_2_Temperatursensor\_root.v4p" bgcolor="15132390" filename="C:\Users\dl-110\Desktop\ArduinoBasics\07_RGB_LED\vvvv\RGB_LED.v4p" systemname="RGB_LED">
    <BOUNDS height="12240" left="0" top="0" type="Window" width="10950">
    </BOUNDS>
    <NODE componentmode="Hidden" id="123" nodename="RGB (Color Split)" systemname="RGB (Color Split)">
@@ -185,15 +185,15 @@
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="1" values="488.5">
+   <PIN pinname="Y Input Value" slicecount="1" values="413">
    </PIN>
    <PIN pinname="Slider Behavior" slicecount="1" values="Slider">
    </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="952.714285714286">
+   <PIN pinname="X Input Value" slicecount="1" values="904">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Simulate Poti|">
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="|Simulate Temp|">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="209" systemname="IOBox (Value Advanced)">
@@ -1538,7 +1538,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="ComPort">
    </PIN>
    </NODE>
-   <NODE id="259" componentmode="InAWindow" systemname="TemperatureSensor" filename="TemperatureSensor.v4p" nodename="TemperatureSensor.v4p">
+   <NODE id="259" componentmode="Hidden" systemname="TemperatureSensor" filename="TemperatureSensor.v4p" nodename="TemperatureSensor.v4p">
    <PIN pinname="Simulate Poti" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
@@ -1552,6 +1552,8 @@
    <PIN pinname="Sensor Out" visible="1">
    </PIN>
    <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Simulate Temp" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="100044" srcpinname="Output Enum" dstnodeid="259" dstpinname="Pin Modes" linkstyle="VHV">
@@ -1636,4 +1638,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <LINK srcnodeid="208" srcpinname="Y Output Value" dstnodeid="259" dstpinname="Simulate Temp">
+   </LINK>
    </PATCH>
